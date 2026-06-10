@@ -1,11 +1,3 @@
-/*
-CASE 04 - AUDIT VE FIREWALL
-PROBLEM 02 - Audit Log Okuma ve Analiz
-
-Amaç:
-SQL Server Audit tarafından üretilen logları okumak ve analiz etmek.
-*/
-
 USE AdventureWorksLT2022;
 GO
 

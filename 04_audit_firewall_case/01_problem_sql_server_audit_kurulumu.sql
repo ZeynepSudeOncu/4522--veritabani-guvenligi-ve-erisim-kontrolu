@@ -1,13 +1,8 @@
-/*
-CASE 04 - AUDIT VE FIREWALL
-PROBLEM 01 - SQL Server Audit Kurulumu
 
-Amaç:
-AdventureWorksLT2022 üzerinde yapılan SELECT, INSERT, UPDATE, DELETE ve yetki değişikliği işlemlerini loglamak.
-
-Ön şart:
-C:\SQLAuditLogs\ klasörü SQL Server servis hesabı tarafından yazılabilir olmalıdır.
-*/
+SELECT 
+    IS_SRVROLEMEMBER('sysadmin') AS IsSysAdmin,
+    HAS_PERMS_BY_NAME(NULL, NULL, 'ALTER ANY SERVER AUDIT') AS HasAlterAnyServerAudit;
+GO
 
 USE master;
 GO
@@ -66,3 +61,8 @@ SELECT
 FROM sys.database_audit_specifications
 WHERE name = 'AdventureWorksLT2022_DatabaseAuditSpec';
 GO
+
+
+
+
+
